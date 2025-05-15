@@ -278,9 +278,7 @@ body[data-theme='dark'] .top-nav ul li a:hover {
     background-color: #444;
 }
 
-body[data-theme='dark'] main.content {
-    /* Adjust if needed */
-}
+
 
 body[data-theme='dark'] .two-column-layout .main-content {
     color: #ddd;
