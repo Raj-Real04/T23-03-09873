@@ -1,0 +1,153 @@
+/* General Body Styles */
+body {
+    font-family: sans-serif; /* Or your preferred font */
+    margin: 0;
+    padding: 0;
+    /* Using a solid black background instead of a gradient and image */
+    background-color: black;
+    color: #f0f0f0; /* Light grey text for readability on black */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: #f0f0f0; /* Light grey text */
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque black */
+    color: #f0f0f0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Vertically align items */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px; /* Optional: Rounded corners for links */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly highlight on hover */
+}
+
+/* Main Content Area */
+.content {
+    flex-grow: 1; /* Allow the content to take up remaining vertical space */
+    padding: 20px; /* Add some padding around the main content */
+    width: 90%; /* Limit content width for better readability */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p{
+    color: #eee;
+    line-height: 1.7;
+}
+
+/* Form Styles */
+.form-page { /* Added a class for form pages */
+    background-color: #fff; /* White background for the entire form page */
+    color: #333;
+}
+
+.form-container {
+    background-color: black; /* Black background for the form container */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px auto; /* Center the form */
+    max-width: 500px; /* Adjust as needed */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea,
+.form-container input[type="tel"],
+.form-container input[type="date"],
+.form-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #eee;
+    box-sizing: border-box;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-container button[type="submit"] {
+    background-color: #666;
+    color: #f0f0f0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #888;
+}
+
+.form-container .survey-question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+}
+
+.form-container .survey-options label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+    color: #eee;
+}
+
+.form-container .survey-options input[type="radio"] {
+    margin-right: 5px;
+}

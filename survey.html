@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Survey Page - Share Your Feedback!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="survey.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body id="surveyBody">
+    <header>
+        <h1><span class="material-icons">poll</span> Survey Page</h1>
+        <button class="theme-toggle-button" id="theme-toggle">
+            <span class="material-icons">brightness_4</span>
+        </button>
+    </header>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="homepage.html">
+                    <span class="material-icons">home</span>
+                    Homepage
+                </a>
+            </li>
+            <li><a href="about.html">
+                    <span class="material-icons">person</span>
+                    About Me
+                </a>
+            </li>
+            <li><a href="portfolio.html">
+                    <span class="material-icons">work</span>
+                    Portfolio
+                </a>
+            </li>
+            <li><a href="contact.html">
+                    <span class="material-icons">email</span>
+                    Contact Form
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form action="/submit-survey" method="post">
+            <fieldset>
+                <legend>General Feedback</legend>
+                <label>How satisfied are you with our services?</label>
+                <div class="radio-group">
+                    <input type="radio" id="satisfied" name="satisfaction" value="satisfied" required>
+                    <label for="satisfied">Satisfied</label>
+                    <input type="radio" id="neutral" name="satisfaction" value="neutral" required>
+                    <label for="neutral">Neutral</label>
+                    <input type="radio" id="dissatisfied" name="satisfaction" value="dissatisfied" required>
+                    <label for="dissatisfied">Dissatisfied</label>
+                </div>
+
+                <label>Would you recommend our services to others?</label>
+                <div class="radio-group">
+                    <input type="radio" id="recommend_yes" name="recommend" value="yes" required>
+                    <label for="recommend_yes">Yes</label>
+                    <input type="radio" id="recommend_no" name="recommend" value="no" required>
+                    <label for="recommend_no">No</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feature Importance</legend>
+                <label>Which features are important to you? (Check all that apply)</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="feature1" name="features" value="Ease of Use">
+                    <label for="feature1">Ease of Use</label>
+                    <input type="checkbox" id="feature2" name="features" value="Reliability">
+                    <label for="feature2">Reliability</label>
+                    <input type="checkbox" id="feature3" name="features" value="Performance">
+                    <label for="feature3">Performance</label>
+                    <input type="checkbox" id="feature4" name="features" value="Customer Support">
+                    <label for="feature4">Customer Support</label>
+                    <input type="checkbox" id="feature5" name="features" value="Pricing">
+                    <label for="feature5">Pricing</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Open-Ended Questions</legend>
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Tell us what you think..."></textarea>
+
+                <label for="suggestions">Suggestions for Improvement:</label>
+                <textarea id="suggestions" name="suggestions" placeholder="How can we improve?"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit Survey <span class="material-icons">send</span></button>
+        </form>
+    </main>
+    <footer>
+        <p> Copyright&copy; RajTech</p>
+    </footer>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const surveyBody = document.getElementById('surveyBody');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            surveyBody.classList.add(savedTheme);
+            updateThemeIcon(savedTheme);
+        } else {
+            updateThemeIcon('light-theme'); // Default icon
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            surveyBody.classList.toggle('dark-theme');
+            const currentTheme = surveyBody.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcon(currentTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggleBtn.querySelector('.material-icons');
+            if (theme === 'dark-theme') {
+                icon.textContent = 'brightness_7'; // Sun icon for dark theme
+            } else {
+                icon.textContent = 'brightness_4'; // Moon icon for light theme
+            }
+        }
+    </script>
+</body>
+</html>

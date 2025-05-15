@@ -1,0 +1,443 @@
+/* style.css */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white; /* Solid white background */
+    z-index: -1;
+    transition: background 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333; /* Darker text for readability on white */
+    background: transparent;
+    min-height: 200vh;
+    display: flex; /* Use flexbox for the whole layout */
+    flex-direction: row; /* Default to row for wider screens */
+    transition: color 0.3s ease;
+}
+
+body.dark-theme::before {
+    background: #121212; /* Dark background */
+}
+
+body.dark-theme {
+    color: #f0f0f0; /* Light text on dark background */
+}
+
+nav.left-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (top) */
+    background: white; /* White background for nav */
+    padding: 20px;
+    width: 200px; /* Fixed width for the left nav */
+    position: fixed; /* Fixed position for the nav */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 10;
+    box-sizing: border-box;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme nav.left-nav {
+    background: #1E1E1E; /* Dark nav background */
+    color: #f0f0f0;
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1);
+}
+
+nav.left-nav a {
+    color: #333; /* Darker text for nav links */
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Vertically center icon and text */
+    width: 100%; /* Make links fill the nav width */
+    box-sizing: border-box;
+}
+
+body.dark-theme nav.left-nav a {
+    color: #f0f0f0;
+}
+
+nav.left-nav a span {
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme nav.left-nav a span {
+    color: #64B5F6;
+}
+
+nav.left-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Very light grey hover */
+    color: #007bff; /* Blue on hover */
+}
+
+body.dark-theme nav.left-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* Light grey hover */
+    color: #64B5F6;
+}
+
+main.main-content {
+    flex-grow: 1; /* Main content takes up remaining space */
+    padding-left: 240px; /* Add padding to the left to clear the nav */
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme main.main-content {
+    background-color: #121212;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 200px);
+    margin-left: 200px;
+}
+
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .page-section {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+
+.second-page {
+    background-color: #f8f9fa; /* Slightly off-white for second page */
+    color: #555;
+    padding-top: 0;
+    align-items: flex-start;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .second-page {
+    background-color: #1E1E1E;
+    color: #ccc;
+}
+
+.second-page .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.second-page .grid-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .second-page .grid-item {
+    background: #272727;
+    color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.second-page .grid-item h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .second-page .grid-item h2 {
+    color: #64B5F6;
+}
+
+.second-page .grid-item p {
+    color: #555;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .second-page .grid-item p {
+    color: #ccc;
+}
+
+footer {
+    background: white;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme footer {
+    background: #1E1E1E;
+    color: #f0f0f0;
+}
+
+.second-page .contact-section,
+.second-page .survey-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-page .contact-section .form-container,
+.second-page .survey-section .form-container {
+    width: 90%;
+    max-width: 500px;
+}
+
+.second-page .grid-item img {
+    filter: grayscale(80%);
+    transition: filter 0.3s ease;
+}
+
+body.dark-theme .second-page .grid-item img {
+    filter: grayscale(20%);
+}
+
+.second-page .grid-item img:hover {
+    filter: grayscale(0%);
+}
+
+body.dark-theme .second-page .grid-item img:hover {
+    filter: grayscale(0%);
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack nav and main on small screens */
+    }
+
+    nav.left-nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 10px 0;
+        box-shadow: none;
+    }
+
+    nav.left-nav a {
+        margin: 0 10px;
+        white-space: nowrap;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main.main-content {
+        padding-left: 0;
+        padding-top: 100px;
+        width: 100%;
+        margin-left: 0;
+    }
+    .second-page{
+        padding-top: 50px;
+    }
+}
+
+
+
+
+.first-page {
+    background-color: white;
+    color: #333;
+    position: relative; /* Needed for absolute positioning of background */
+    overflow: hidden; /* Clip any overflowing background images */
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center; /* Center text vertically */
+    padding-left: 100px; /* Add some left padding for the text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .first-page {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.first-page h1 {
+    font-size: 7em; /* Enlarge the text */
+    margin: 0; /* Remove default margins */
+    color: black; /* Ensure text is black */
+    position: relative; /* For stacking above background */
+    z-index: 2; /* Ensure text is on top of images */
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .first-page h1 {
+    color: #f0f0f0;
+}
+
+.first-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pixabay.jpg'), url('raj technologies.png'); /* Replace with your image paths */
+    background-size: cover, contain; /* Adjust as needed (e.g., cover, contain, auto) */
+    background-position: center, left top; /* Adjust image positions */
+    opacity: 0.3; /* Make the background images semi-transparent */
+    z-index: 1; /* Place background behind text */
+    transition: background-image 0.3s ease; /* If you have dark theme specific images */
+}
+
+body.dark-theme .first-page::before {
+    /* You can change the background images for dark theme if needed */
+    /* background-image: url('dark_pixabay.jpg'), url('dark_raj_technologies.png'); */
+}
+
+.first-page .foreground-video {
+    position: absolute;
+    top: 50%;
+    left: 80%; /* Adjust position as needed */
+    transform: translate(-50%, -50%); /* Center the video */
+    width: 320px; /* Example width */
+    height: 240px; /* Example height */
+    z-index: 3; /* Ensure video is on top */
+}
+
+.first-page .foreground-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the container */
+}
+.card {
+    width: 280px;
+    height: 150px;
+    background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85)); /* Default night color */
+    border-radius: 15px;
+    box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+body.dark-theme .card {
+    box-shadow: rgb(255,255,255,0.3) 5px 10px 50px ,rgb(255,255,255,0.3) -5px 0px 250px;
+}
+
+.card:hover {
+    box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+}
+
+body.dark-theme .card:hover {
+    box-shadow: rgb(255,255,255,0.5) 5px 10px 50px ,rgb(255,255,255,0.5) -5px 0px 250px;
+}
+
+.time-text {
+    font-size: 30px; /* Reduced font size to fit better */
+    margin-top: 0px;
+    margin-left: 15px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex; /* Align time and AM/PM */
+    align-items: baseline;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .time-text {
+    color: #f0f0f0;
+}
+
+.time-text span:first-child {
+    font-size: 50px; /* Larger hours and minutes */
+}
+
+.time-sub-text {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.day-text {
+    font-size: 20px; /* Slightly larger greeting */
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .day-text {
+    color: #f0f0f0;
+}
+
+.moon {
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: all 0.3s ease-in-out, color 0.3s ease;
+    color: white;
+    cursor: pointer;
+}
+
+body.dark-theme .moon {
+    color: #f0f0f0;
+}
+
+.card:hover > .moon {
+    font-size: 23px;
+}
+
+body.dark-theme .card:hover > .moon {
+    font-size: 23px;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 100;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .theme-toggle {
+    color: #f0f0f0;
+}
+
+.theme-icon {
+    font-size: 24px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact Form Page - Get in Touch!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body id="contactBody">
+    <header>
+        <h1><span class="material-icons">email</span> Contact Me</h1>
+        <button class="theme-toggle-button" id="theme-toggle">
+            <span class="material-icons">brightness_4</span>
+        </button>
+    </header>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="homepage.html">
+                    <span class="material-icons">home</span>
+                    Homepage
+                </a>
+            </li>
+            <li><a href="about.html">
+                    <span class="material-icons">person</span>
+                    About Me
+                </a>
+            </li>
+            <li><a href="portfolio.html">
+                    <span class="material-icons">work</span>
+                    Portfolio
+                </a>
+            </li>
+            <li><a href="survey.html">
+                    <span class="material-icons">poll</span>
+                    Survey Page
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <form id="contactForm" action="/submit" method="post">
+            <h2>Get in Touch</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="emailError"></div>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <div class="error-message" id="phoneError"></div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message <span class="material-icons">send</span></button>
+        </form>
+    </main>
+    <footer>
+        <p>Copyright &copy; RajTech</p>
+    </footer>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const contactBody = document.getElementById('contactBody');
+        const contactForm = document.getElementById('contactForm');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            contactBody.classList.add(savedTheme);
+            updateThemeIcon(savedTheme);
+        } else {
+            updateThemeIcon('light-theme'); // Default icon
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            contactBody.classList.toggle('dark-theme');
+            const currentTheme = contactBody.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcon(currentTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggleBtn.querySelector('.material-icons');
+            if (theme === 'dark-theme') {
+                icon.textContent = 'brightness_7'; // Sun icon for dark theme
+            } else {
+                icon.textContent = 'brightness_4'; // Moon icon for light theme
+            }
+        }
+
+        contactForm.addEventListener('submit', function(event) {
+            let isValid = true;
+            emailError.textContent = '';
+            phoneError.textContent = '';
+
+            // Email Validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Tanzanian Phone Number Validation (allowing formats like 07XXXXXXXX or +2557XXXXXXXX)
+            const phoneRegex = /^(0[67]\d{8}|\+255[67]\d{8})$/;
+            if (!phoneRegex.test(phoneInput.value)) {
+                phoneError.textContent = 'Please enter a valid Tanzanian phone number (e.g., 07XXXXXXXX or +2557XXXXXXXX).';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission if validation fails
+            } else {
+                // In a real scenario, you would submit the form data here
+                alert('Form submitted successfully!');
+            }
+        });
+    </script>
+</body>
+</html>

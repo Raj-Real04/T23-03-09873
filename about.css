@@ -1,0 +1,521 @@
+/* about.css */
+
+/* General Styles (Light Theme - Default) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    overflow: hidden; /* To contain floated elements and rounded corners */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-nav {
+    background-color: #2c3e50; /* Dark blue navigation */
+    color: #fff;
+    padding: 15px 0;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-nav ul li a {
+    color: #ecf0f1; /* Light grey text */
+    text-decoration: none;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.top-nav ul li a .material-icons {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.top-nav ul li a:hover {
+    background-color: #34495e;
+}
+
+main.content {
+    display: flex;
+    flex-direction: column; /* Modified to stack content by default */
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.two-column-layout {
+    display: flex; /* Enable two-column layout for main content and sidebar */
+    flex-direction: row;
+    gap: 30px;
+}
+
+.main-content {
+    flex: 2;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h2 {
+    color: #007bff; /* Primary blue */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 8px;
+    font-size: 2.2em;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.google-icon {
+    font-size: 1.5em;
+    color: #4285f4; /* Google blue */
+}
+
+h3 {
+    color: #28a745; /* Success green */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    transition: color 0.3s ease;
+    padding-bottom: 5px; /* Added padding for the underline */
+    border-bottom: 2px solid transparent; /* Initial transparent border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #28a745; /* Match heading color */
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+p {
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+}
+
+/* Styles for the added specifications */
+
+h3.technical-skills-title {
+    color: #ffc107; /* Warning yellow */
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 8px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.main-content ul li strong {
+    color: #007bff; /* Consistent with heading color */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.sidebar h3 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    background-color: #e6f7ff; /* Light blue shade */
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 6px solid #28a745; /* Accent green */
+    color: #333;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul li span {
+    font-weight: bold;
+    color: #555;
+}
+
+.sidebar h3.connect-title {
+    background-color: #28a745;
+}
+
+.sidebar p a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f0f8ff; /* Light blue */
+    color: #007bff;
+    border-radius: 6px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #b3d7ff;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar p a:hover {
+    background-color: #b3d7ff;
+    color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 0 0 8px 8px;
+    margin-top: 30px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #555;
+    padding: 5px;
+    outline: none;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: #007bff;
+}
+
+/* Dark Theme Styles */
+body[data-theme='dark'] {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+body[data-theme='dark'] .container {
+    background-color: #252525;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme='dark'] .top-nav {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body[data-theme='dark'] .top-nav ul li a {
+    color: #ccc;
+}
+
+body[data-theme='dark'] .top-nav ul li a:hover {
+    background-color: #444;
+}
+
+body[data-theme='dark'] main.content {
+    /* Adjust if needed */
+}
+
+body[data-theme='dark'] .two-column-layout .main-content {
+    color: #ddd;
+    border-right: 1px solid #555;
+}
+
+body[data-theme='dark'] .sidebar {
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme='dark'] h2 {
+    color: #4dabf5; /* Slightly lighter blue for dark theme */
+    border-bottom: 3px solid #4dabf5;
+}
+
+body[data-theme='dark'] .google-icon {
+    color: #4285f4; /* Keep Google blue consistent */
+}
+
+body[data-theme='dark'] h3 {
+    color: #98fb98; /* Light green for dark theme */
+    padding-bottom: 5px; /* Added padding for the underline */
+    border-bottom: 2px solid transparent; /* Initial transparent border */
+}
+
+body[data-theme='dark'] h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #98fb98; /* Match heading color */
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+body[data-theme='dark'] ul li {
+    color: #ccc;
+}
+
+body[data-theme='dark'] p {
+    color: #f0f0f0;
+}
+
+body[data-theme='dark'] h3.technical-skills-title {
+    color: #ffdd57; /* Slightly lighter yellow for dark theme */
+    border-bottom: 3px solid #ffdd57;
+}
+
+body[data-theme='dark'] .two-column-layout .main-content ul li strong {
+    color: #4dabf5;
+}
+
+body[data-theme='dark'] .sidebar h3 {
+    background-color: #4dabf5;
+    color: #222;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme='dark'] .sidebar ul li {
+    background-color: #444;
+    color: #eee;
+    border-left-color: #98fb98;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme='dark'] .sidebar h3.connect-title {
+    background-color: #98fb98;
+    color: #222;
+}
+
+body[data-theme='dark'] .sidebar p a {
+    background-color: #444;
+    color: #4dabf5;
+    border: 1px solid #666;
+}
+
+body[data-theme='dark'] .sidebar p a:hover {
+    background-color: #666;
+    color: #89cfff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body[data-theme='dark'] footer {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body[data-theme='dark'] #theme-toggle {
+    color: #ddd;
+}
+
+body[data-theme='dark'] #theme-toggle:hover {
+    color: #89cfff;
+}
+
+/* Improve main tag styling for better content flow */
+main.content {
+    align-items: flex-start; /* Align items from the start */
+}
+
+/* Responsive adjustments (optional, but recommended) */
+@media (max-width: 768px) {
+    main.content.two-column-layout {
+        flex-direction: column; /* Stack sidebar below main content on smaller screens */
+    }
+
+    .two-column-layout .main-content {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+}
+
+/* Restore the animated border on headings */
+h2::after, h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 40px;
+    height: 3px;
+    background-color: #00c853; /* Accent color for light theme */
+    border-radius: 2px;
+    animation: expandBorder 1.5s ease-in-out infinite alternate;
+}
+
+h3::after {
+    background-color: #ffb300; /* Another accent color for light theme */
+    width: 30px;
+}
+
+@keyframes expandBorder {
+    0% {
+        width: 40px;
+    }
+    100% {
+        width: 60px;
+    }
+}
+
+/* Dark theme specific animated borders */
+body[data-theme='dark'] h2::after {
+    background-color: #64b5f6; /* Lighter accent for dark theme */
+}
+
+body[data-theme='dark'] h3::after {
+    background-color: #a5d6a7; /* Lighter accent for dark theme */
+}
+
+/* Styling for toggle sections */
+.toggle-section h3 {
+    cursor: pointer;
+    user-select: none;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+.toggle-details {
+    margin-left: 20px;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
+
+body[data-theme='dark'] .toggle-details {
+    border-left-color: #555;
+}
+
+/* Styling for the two-way layout */
+.two-way-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme='dark'] .two-way-layout {
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.two-way-layout > div {
+    flex: 1 1 300px; /* Distribute space, minimum width of 300px */
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body[data-theme='dark'] .two-way-layout > div {
+    background-color: #444;
+    color: #eee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.two-way-layout h4 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+body[data-theme='dark'] .two-way-layout h4 {
+    color: #4dabf5;
+    border-bottom-color: #555;
+}
+
+.two-way-layout a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body[data-theme='dark'] .two-way-layout a {
+    color: #98fb98;
+}
+
+.two-way-layout iframe {
+    width: 100%;
+    border: 0;
+    margin-top: 15px;
+    border-radius: 4px;
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio Page - Showcasing My Computer Science Projects">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - [RajTech]</title>
+    <link rel="stylesheet" href="porfolio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        /* Styles for dark theme */
+        body.dark-theme {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+        body.dark-theme header {
+            background-color: #333;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+        }
+        body.dark-theme .top-nav {
+            background-color: #444;
+        }
+        body.dark-theme .project-card {
+            background: rgba(30, 30, 30, 0.95);
+            border: 1px solid rgba(50, 50, 50, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        body.dark-theme .project-card h3 {
+            color: #eee;
+        }
+        body.dark-theme .project-card p {
+            color: #ccc;
+        }
+        body.dark-theme .project-card .tech-stack {
+            color: #bbb;
+        }
+        body.dark-theme .project-card .view-project {
+            background-color: #555;
+            color: #eee;
+        }
+        body.dark-theme .project-card .view-project:hover {
+            background-color: #777;
+        }
+        body.dark-theme footer {
+            background-color: #333;
+            color: #d4d4d4;
+        }
+        body.dark-theme .theme-toggle-button {
+            background-color: #444;
+            color: #fff;
+        }
+        body.dark-theme .theme-toggle-button:hover {
+            background-color: #555;
+        }
+        .project-details {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .dark-theme .project-details {
+            background-color: #333;
+            border-color: #555;
+        }
+        .project-details.hidden {
+            display: none;
+        }
+        .project-view-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .project-view-layout > div {
+            flex: 1;
+        }
+        /* Adjustments for material icons in dark theme if needed */
+        body.dark-theme .material-icons {
+            color: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="material-icons">work</span> Portfolio</h1>
+        <button class="theme-toggle-button" id="theme-toggle">
+            <span class="material-icons">brightness_4</span>
+        </button>
+    </header>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="homepage.html">
+                    <span class="material-icons">home</span>
+                    Homepage
+                </a>
+            </li>
+            <li><a href="about.html">
+                    <span class="material-icons">person</span>
+                    About Me
+                </a>
+            </li>
+            <li><a href="portfolio.html">
+                    <span class="material-icons">work</span>
+                    Portfolio
+                </a>
+            </li>
+            <li><a href="contact.html">
+                    <span class="material-icons">email</span>
+                    Contact Form
+                </a>
+            </li>
+            <li><a href="survey.html">
+                    <span class="material-icons">poll</span>
+                    Survey Page
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main class="projects-grid">
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Student Records Management System</p>
+            <p class="tech-stack">Technologies: Python, Django, PostgreSQL</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 1</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A comprehensive system for managing student records, including enrollment, grades, and attendance.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> User authentication, role-based access control, report generation, database management.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Designing a scalable database schema, implementing secure user authentication.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Weather Prediction Model</p>
+            <p class="tech-stack">Technologies: Python, Machine Learning (Scikit-learn), Data Analysis (Pandas)</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 2</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A machine learning model to predict future weather conditions based on historical data.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Data preprocessing, model training, evaluation metrics, visualization of predictions.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Handling noisy data, selecting the appropriate machine learning algorithm.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>Traffic Update Mobile App</p>
+            <p class="tech-stack">Technologies: React Native, Firebase</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 3</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A mobile application to provide real-time traffic updates to users.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> User location tracking, incident reporting, map integration, push notifications.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Optimizing battery usage for location tracking, ensuring real-time data accuracy.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 4</h3>
+            <p>E-commerce Platform</p>
+            <p class="tech-stack">Technologies: Java, Spring Boot, MySQL</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 4</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A fully functional e-commerce platform for online shopping.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Product catalog, shopping cart, user authentication, order processing, payment gateway integration.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Implementing secure payment processing, managing inventory efficiently.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 5</h3>
+            <p>Personal Portfolio Website</p>
+            <p class="tech-stack">Technologies: HTML, CSS, JavaScript, React</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 5</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A personal website to showcase projects, skills, and experience.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Responsive design, project showcase, about me section, contact form.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Creating an engaging and user-friendly design, optimizing for different screen sizes.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 6</h3>
+            <p>Decentralized File Storage System</p>
+            <p class="tech-stack">Technologies: Blockchain (Solidity), IPFS</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 6</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A decentralized system for storing and retrieving files using blockchain and IPFS.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Secure file storage, content addressing, immutability, user-controlled access.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Implementing smart contracts, integrating with IPFS, managing file permissions on the blockchain.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 7</h3>
+            <p>AI-Powered Chatbot</p>
+            <p class="tech-stack">Technologies: Python, Natural Language Processing (NLTK/SpaCy), TensorFlow</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 7</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> An intelligent chatbot capable of understanding and responding to user queries using NLP and deep learning.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Intent recognition, entity extraction, dialogue management, natural language generation.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Training the model with sufficient data, handling ambiguous queries, improving response accuracy.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 8</h3>
+            <p>Image Recognition System</p>
+            <p class="tech-stack">Technologies: Python, Computer Vision (OpenCV), Deep Learning (Keras/PyTorch)</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 8</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A system that can identify objects and patterns in images using computer vision and deep learning techniques.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Image preprocessing, feature extraction, model training, object detection and classification.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Handling variations in image quality, training with diverse datasets, optimizing model performance.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <h3>Project 9</h3>
+            <p>Real-time Collaborative Document Editor</p>
+            <p class="tech-stack">Technologies: Node.js, WebSockets, React</p>
+            <div class="project-view">
+                <button class="toggle-details-btn">Show Details</button>
+                <div class="project-details hidden">
+                    <h4>Details for Project 9</h4>
+                    <div class="project-view-layout">
+                        <div>
+                            <p><strong>Description:</strong> A web-based application that allows multiple users to edit the same document simultaneously in real-time.</p>
+                        </div>
+                        <div>
+                            <p><strong>Key Features:</strong> Real-time updates, concurrent editing, user presence indicators, version history.</p>
+                        </div>
+                        <div>
+                            <p><strong>Challenges:</strong> Implementing efficient real-time communication, handling conflicting edits, ensuring data consistency.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; RajTech</p>
+    </footer>
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const toggleDetailsBtns = document.querySelectorAll('.toggle-details-btn');
+        const projectDetails = document.querySelectorAll('.project-details');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+            updateThemeIcon(savedTheme);
+        } else {
+            // Default to light theme
+            updateThemeIcon('light-theme');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcon(currentTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggleBtn.querySelector('.material-icons');
+            if (theme === 'dark-theme') {
+                icon.textContent = 'brightness_7'; // Sun icon for dark theme
+            } else {
+                icon.textContent = 'brightness_4'; // Moon icon for light theme
+            }
+        }
+
+        toggleDetailsBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                projectDetails[index].classList.toggle('hidden');
+                btn.textContent = projectDetails[index].classList.contains('hidden') ? 'Show Details' : 'Hide Details';
+            });
+        });
+    </script>
+</body>
+</html>

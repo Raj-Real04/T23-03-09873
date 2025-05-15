@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About Me - [RAJ] - Passionate Computer Science Graduate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - [RajTech]</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body data-theme="light">
+    <div id="theme-toggle">
+        <span class="material-icons">brightness_high</span>
+    </div>
+    <div class="container">
+        <nav class="top-nav">
+            <ul>
+                <li><a href="homepage.html">
+                        <span class="material-icons">home</span>
+                        Homepage
+                    </a>
+                </li>
+                <li><a href="about.html">
+                        <span class="material-icons">person</span>
+                        About Me
+                    </a>
+                </li>
+                <li><a href="portfolio.html">
+                        <span class="material-icons">work</span>
+                        Portfolio
+                    </a>
+                </li>
+                <li><a href="contact.html">
+                        <span class="material-icons">email</span>
+                        Contact Form
+                    </a>
+                </li>
+                <li><a href="survey.html">
+                        <span class="material-icons">poll</span>
+                        Survey Page
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="content two-column-layout">
+            <div class="main-content">
+                <h2>About Me <span class="material-icons google-icon">google</span></h2>
+                <p>Hello! I'm RAJ, a highly motivated and recent computer science graduate from the University of Dodoma. I'm driven by a passion for crafting elegant and efficient software solutions and eager to apply my skills in a dynamic environment. My academic background has equipped me with a strong understanding of software development principles and a practical skillset in various technologies.</p>
+
+                <h3>Education</h3>
+                <ul>
+                    <li>Secondary Education: Jaffery Schools</li>
+                    <li>Advanced Education: Ihungo Boys School</li>
+                    <li>University Education: University of Dodoma, <strong>Bachelor of Science in Computer Science</strong></li>
+                </ul>
+
+                <div class="toggle-section">
+                    <h3>Technical Skills <button class="toggle-button" data-target="technical-skills-details">+</button></h3>
+                    <div class="toggle-details" id="technical-skills-details">
+                        <p>My core technical proficiencies include:</p>
+                        <ul>
+                            <li><strong>Programming Languages:</strong> Proficient in Python, Java, and JavaScript; familiar with C++ and [mention any other languages].</li>
+                            <li><strong>Web Development:</strong> Experienced in front-end development using HTML, CSS, and JavaScript, along with frameworks like React. On the backend, I have worked with Node.js and Express.</li>
+                            <li><strong>Data Analysis & Databases:</strong> Skilled in SQL for database management (MySQL, PostgreSQL) and have explored NoSQL databases like MongoDB. I have also utilized libraries like Pandas for data manipulation.</li>
+                            <li><strong>Cloud Technologies:</strong> Familiar with basic concepts of cloud computing and have some introductory experience with Google Cloud Platform (GCP).</li>
+                            <li><strong>Other Skills:</strong> Strong understanding of data structures and algorithms, proficient in using Git for version control, and familiar with Agile development methodologies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="toggle-section">
+                    <h3>Projects & Achievements <button class="toggle-button" data-target="projects-details">+</button></h3>
+                    <div class="toggle-details" id="projects-details">
+                        <p>Throughout my academic career, I've engaged in several projects that have honed my technical abilities and problem-solving skills. Notably, I developed a real-time chat application using Socket.IO and React, which demonstrated my ability to handle asynchronous communication. I also participated in a hackathon focused on developing sustainable solutions for local communities.</p>
+                    </div>
+                </div>
+
+                <h3>Areas of Interest & Career Aspirations</h3>
+                <p>I am particularly interested in pursuing opportunities in Full-Stack Web Development and exploring the applications of Machine Learning in software development. My career aspiration is to contribute to innovative projects where I can continuously learn and grow as a software engineer.</p>
+            </div>
+            <div class="sidebar">
+                <h3>Skills Snapshot</h3>
+                <ul>
+                    <li><span>Programming:</span> Python, Java, JavaScript, C++</li>
+                    <li><span>Web Dev:</span> HTML, CSS, JavaScript, React, Node.js, Express</li>
+                    <li><span>Databases:</span> MySQL, PostgreSQL, MongoDB, SQL</li>
+                    <li><span>Data Analysis:</span> Pandas</li>
+                    <li><span>Version Control:</span> Git</li>
+                    <li><span>Methodologies:</span> Agile</li>
+                    <li><span>Problem-Solving</span></li>
+                    <li><span>Communication</span></li>
+                    <li><span>Teamwork</span></li>
+                    <li><span>Cloud (Intro):</span> Google Cloud Platform (GCP)</li>
+                </ul>
+                <br>
+                <h3 class="connect-title">Connect With Me</h3>
+                <p>
+                    <a href="https://www.linkedin.com/in/raj-khalid-995239332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a><br>
+                    <a href="owner:Raj-Real04" target="_blank">GitHub</a><br>
+                    <a href="contact.html">Contact Form</a>
+                </p>
+            </div><br><br>
+            <p>Eager to contribute my skills and learn from experienced professionals. Feel free to reach out!</p>
+
+            <div class="two-way-layout">
+                <h3>Find Me & See My Work</h3>
+                <div class="map-section">
+                    <h4>Location</h4>
+                    <a href="https://www.google.com/maps?q=University+of+Dodoma,+Tanzania" target="_blank">View on Map</a>
+                </div>
+                <div class="video-section">
+                    <h4>My Demo Video</h4>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch on YouTube</a>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Copyright © RajTech</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const themeIcon = themeToggle.querySelector('.material-icons');
+        const toggleButtons = document.querySelectorAll('.toggle-button');
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', newTheme);
+            themeIcon.textContent = newTheme === 'light' ? 'brightness_high' : 'nightlight';
+        });
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
+                const details = document.getElementById(targetId);
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    button.textContent = '-';
+                } else {
+                    details.style.display = 'none';
+                    button.textContent = '+';
+                }
+            });
+        });
+
+        // Initially hide the details sections
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.toggle-details').forEach(detail => {
+                detail.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
